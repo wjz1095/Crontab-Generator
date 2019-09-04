@@ -81,6 +81,8 @@ Partial Class MainForm
         Me.ResetButton = New System.Windows.Forms.Button()
         Me.CronReferenceLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.ScriptRunTimesListBox = New System.Windows.Forms.ListBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -88,6 +90,7 @@ Partial Class MainForm
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
         Me.SuspendLayout()
         '
         'FinalOutputTextBox
@@ -756,12 +759,32 @@ Partial Class MainForm
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "V1.0, 9/4/2019"
         '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.ScriptRunTimesListBox)
+        Me.GroupBox8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GroupBox8.Location = New System.Drawing.Point(460, 184)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(205, 381)
+        Me.GroupBox8.TabIndex = 17
+        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "Script Will Run At These Times"
+        '
+        'ScriptRunTimesListBox
+        '
+        Me.ScriptRunTimesListBox.FormattingEnabled = True
+        Me.ScriptRunTimesListBox.Location = New System.Drawing.Point(10, 17)
+        Me.ScriptRunTimesListBox.Name = "ScriptRunTimesListBox"
+        Me.ScriptRunTimesListBox.Size = New System.Drawing.Size(184, 355)
+        Me.ScriptRunTimesListBox.TabIndex = 0
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DimGray
         Me.ClientSize = New System.Drawing.Size(667, 646)
+        Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.CronReferenceLinkLabel)
         Me.Controls.Add(Me.ResetButton)
@@ -792,6 +815,7 @@ Partial Class MainForm
         Me.GroupBox6.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -855,5 +879,7 @@ Partial Class MainForm
     Friend WithEvents CronReferenceLinkLabel As System.Windows.Forms.LinkLabel
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents CustomCommandTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
+    Friend WithEvents ScriptRunTimesListBox As System.Windows.Forms.ListBox
 
 End Class

@@ -89,20 +89,21 @@
 
 
     Private Sub GenerateButton_Click(sender As Object, e As EventArgs) Handles GenerateButton.Click
-        'get input from each box
-        'set input as a string with select/case or try/catch/finally
-        'for each input have a different string
-        'add all strings together to get the final output
-        'put final output in text box
+        'Get input from each list box and set string variables accordingly
+        'Add all strings together to get the final output
+        'Put final output in text box
+        'Generate the times the script will run
+
+        'I know there are better ways to do this but I couldn't be bothered to learn how. There's only a few variables so it's not worth the effort learning for more just yet
 
         'Declare variables
-        Dim MinuteSelect As String
-        Dim HourSelect As String
-        Dim DaySelect As String
-        Dim MonthSelect As String
-        Dim WeekdaySelect As String
-        Dim OutputSelect As String
-        Dim FinalOutput As String
+        Dim MinuteSelect As String = ""
+        Dim HourSelect As String = ""
+        Dim DaySelect As String = ""
+        Dim MonthSelect As String = ""
+        Dim WeekdaySelect As String = ""
+        Dim OutputSelect As String = ""
+        Dim FinalOutput As String = ""
 
         'Minute checking logic
         If EveryMinuteRadioButton.Checked = True Then
@@ -149,11 +150,78 @@
             'Get value of the hour and set as HourSelect
             Dim TempHour As String = SelectHourListBox.SelectedItem
 
-            ''''probably have to do some logic in here to convert 1am to 1 and 2am to 2, etc
-
-
-            HourSelect = 
-            
+            If TempHour = "Midnight" Then
+                HourSelect = 0
+            End If
+            If TempHour = "1am" Then
+                HourSelect = 1
+            End If
+            If TempHour = "2am" Then
+                HourSelect = 2
+            End If
+            If TempHour = "3am" Then
+                HourSelect = 3
+            End If
+            If TempHour = "4am" Then
+                HourSelect = 4
+            End If
+            If TempHour = "5am" Then
+                HourSelect = 5
+            End If
+            If TempHour = "6am" Then
+                HourSelect = 6
+            End If
+            If TempHour = "7am" Then
+                HourSelect = 7
+            End If
+            If TempHour = "8am" Then
+                HourSelect = 8
+            End If
+            If TempHour = "9am" Then
+                HourSelect = 9
+            End If
+            If TempHour = "10am" Then
+                HourSelect = 10
+            End If
+            If TempHour = "11am" Then
+                HourSelect = 11
+            End If
+            If TempHour = "Noon" Then
+                HourSelect = 12
+            End If
+            If TempHour = "1pm" Then
+                HourSelect = 13
+            End If
+            If TempHour = "2pm" Then
+                HourSelect = 14
+            End If
+            If TempHour = "3pm" Then
+                HourSelect = 15
+            End If
+            If TempHour = "4pm" Then
+                HourSelect = 16
+            End If
+            If TempHour = "5pm" Then
+                HourSelect = 17
+            End If
+            If TempHour = "6pm" Then
+                HourSelect = 18
+            End If
+            If TempHour = "7pm" Then
+                HourSelect = 19
+            End If
+            If TempHour = "8pm" Then
+                HourSelect = 20
+            End If
+            If TempHour = "9pm" Then
+                HourSelect = 21
+            End If
+            If TempHour = "10pm" Then
+                HourSelect = 22
+            End If
+            If TempHour = "11pm" Then
+                HourSelect = 23
+            End If
         End If
 
 
@@ -177,11 +245,9 @@
             DaySelect = "*/15"
         End If
         If DaySelectRadioButton.Checked = True Then
+            'Gets value of the selected item and sets that as the string
             Dim TempDay As String = DaySelectListBox.SelectedItem
-
-            'Do some logic
-            DaySelect = ""
-
+            DaySelect = TempDay
         End If
 
 
@@ -204,8 +270,43 @@
         If MonthSelectRadioButton.Checked = True Then
             Dim TempMonth As String = MonthSelectListBox.SelectedItem
 
-            'Do some logic
-            MonthSelect = ""
+            'Gets month from list box and sets appropriately
+            If TempMonth = "Jan" Then
+                MonthSelect = 1
+            End If
+            If TempMonth = "Feb" Then
+                MonthSelect = 2
+            End If
+            If TempMonth = "Mar" Then
+                MonthSelect = 3
+            End If
+            If TempMonth = "Apr" Then
+                MonthSelect = 4
+            End If
+            If TempMonth = "May" Then
+                MonthSelect = 5
+            End If
+            If TempMonth = "Jun" Then
+                MonthSelect = 6
+            End If
+            If TempMonth = "Jul" Then
+                MonthSelect = 7
+            End If
+            If TempMonth = "Aug" Then
+                MonthSelect = 8
+            End If
+            If TempMonth = "Sep" Then
+                MonthSelect = 9
+            End If
+            If TempMonth = "Oct" Then
+                MonthSelect = 10
+            End If
+            If TempMonth = "Nov" Then
+                MonthSelect = 11
+            End If
+            If TempMonth = "Dec" Then
+                MonthSelect = 12
+            End If
         End If
 
 
@@ -222,12 +323,33 @@
         End If
         If WeekdaySelectRadioButton.Checked = True Then
             Dim TempWeekday As String = WeekdaySelectListBox.SelectedItem
-            'Do some logic
 
-            WeekdaySelect = ""
+            'Gets weekday from list box and sets appropriately
+            If TempWeekday = "Sun" Then
+                WeekdaySelect = 0
+            End If
+            If TempWeekday = "Mon" Then
+                WeekdaySelect = 1
+            End If
+            If TempWeekday = "Tue" Then
+                WeekdaySelect = 2
+            End If
+            If TempWeekday = "Wed" Then
+                WeekdaySelect = 3
+            End If
+            If TempWeekday = "Thu" Then
+                WeekdaySelect = 4
+            End If
+            If TempWeekday = "Fri" Then
+                WeekdaySelect = 5
+            End If
+            If TempWeekday = "Sat" Then
+                WeekdaySelect = 6
+            End If
         End If
 
 
+        'Output logic
         If MuteOutputRadioButton.Checked = True Then
             OutputSelect = ""
         End If
@@ -238,9 +360,10 @@
             OutputSelect = SendOutputToEmailTextBox.Text
         End If
 
-        FinalOutput = MinuteSelect + " " + HourSelect + " " + DaySelect + " " + MonthSelect + " " + WeekdaySelect + "   " + CustomCommandTextBox + " " + OutputSelect
+        'Output string, then sets output textbox as the combined string we create with all values
+        FinalOutput = MinuteSelect + " " + HourSelect + " " + DaySelect + " " + MonthSelect + " " + WeekdaySelect + "       " + CustomCommandTextBox.Text + " " + OutputSelect
+        FinalOutputTextBox.Text = FinalOutput
 
-        FinalOutputTextBox.Text = 
     End Sub
 
     

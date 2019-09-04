@@ -9,3 +9,4 @@ C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\Cr
 C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.exe
 C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.xml
 C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.pdb
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.CrontabReference.resources
