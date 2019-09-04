@@ -1,0 +1,11 @@
+C:\Users\FBI-Mobile-347\AppData\Local\Temporary Projects\CrontabGenerator\bin\Debug\CrontabGenerator.exe.config
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\bin\Debug\CrontabGenerator.exe.config
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\bin\Debug\CrontabGenerator.exe
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\bin\Debug\CrontabGenerator.pdb
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\bin\Debug\CrontabGenerator.xml
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.MainForm.resources
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.Resources.resources
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.vbproj.GenerateResource.Cache
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.exe
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.xml
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.pdb
