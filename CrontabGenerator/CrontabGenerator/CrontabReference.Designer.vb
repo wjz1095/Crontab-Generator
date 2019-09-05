@@ -30,6 +30,7 @@ Partial Class CrontabReference
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 12)
         Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
         Me.RichTextBox1.Size = New System.Drawing.Size(749, 621)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")

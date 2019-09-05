@@ -602,18 +602,18 @@ Partial Class MainForm
         '
         'TextBox3
         '
-        Me.TextBox3.Enabled = False
         Me.TextBox3.Location = New System.Drawing.Point(78, 41)
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(223, 20)
         Me.TextBox3.TabIndex = 4
         Me.TextBox3.Text = "/usr/bin/php /home/username/script.php"
         '
         'TextBox2
         '
-        Me.TextBox2.Enabled = False
         Me.TextBox2.Location = New System.Drawing.Point(78, 17)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(223, 20)
         Me.TextBox2.TabIndex = 3
         Me.TextBox2.Text = "/bin/bash -c '/home/username/script.sh'"
