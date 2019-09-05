@@ -598,7 +598,7 @@ Partial Class MainForm
         Me.CustomCommandTextBox.Name = "CustomCommandTextBox"
         Me.CustomCommandTextBox.Size = New System.Drawing.Size(223, 20)
         Me.CustomCommandTextBox.TabIndex = 5
-        Me.CustomCommandTextBox.Text = "/bin/bash -c '"
+        Me.CustomCommandTextBox.Text = "/bin/bash -c '/path/to/script.sh'"
         '
         'TextBox3
         '

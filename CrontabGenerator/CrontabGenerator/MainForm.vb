@@ -378,6 +378,8 @@
         MuteOutputRadioButton.Checked = True
 
         FinalOutputTextBox.Text = ""
+
+        'Does not clear custom string output just in case the user wants to try the same script but at a different time
     End Sub
 
     Private Sub CronReferenceLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles CronReferenceLinkLabel.LinkClicked

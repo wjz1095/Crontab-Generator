@@ -117,4 +117,123 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Setting up cron jobs in Unix, Solaris &amp; Linux
+cron is a Unix, solaris, Linux utility that allows tasks to be automatically run in the background at regular intervals by the cron daemon. 
+
+cron meaning – There is no definitive explanation but most accepted answers is reportedly from Ken Thompson ( author of unix cron ), name cron comes from chron ,the Greek prefix for ‘time.’.
+
+What is cron ? – Cron is a daemon which runs at the times of system boot from /etc/init.d scripts. If needed it can be stopped/started/restart using init script or with command service crond start in Linux systems.
+
+This document covers following aspects of Unix, Linux cron jobs to help you understand and implement cronjobs successfully
+
+Table of Contents:
+What is crontab?
+What is a cron job or cron schedule?
+Crontab Restrictions
+Crontab Commands
+Crontab file – syntax
+Crontab Example
+Crontab Environment
+Disable Email
+Generate log file for crontab activity
+Crontab file location
+
+1. What is crontab?
+Crontab (CRON TABle) is a file which contains the schedule of cron entries to be run and at specified times. File location varies by operating systems, See Crontab file location at the end of this document.
+
+2.What is a cron job or cron schedule?
+Cron job or cron schedule is a specific set of execution instructions specifying day, time and command to execute. crontab can have multiple execution statements.
+
+3. Crontab Restrictions
+You can execute crontab if your name appears in the file /usr/lib/cron/cron.allow. If that file does not exist, you can use
+crontab if your name does not appear in the file /usr/lib/cron/cron.deny.
+If only cron.deny exists and is empty, all users can use crontab. If neither file exists, only the root user can use crontab. The allow/deny files consist of one user name per line.
+
+4. Crontab Commands
+export EDITOR=vi ;to specify a editor to open crontab file.
+
+crontab -e    Edit crontab file, or create one if it doesn’t already exist.
+crontab -l    crontab list of cronjobs , display crontab file contents.
+crontab -r    Remove your crontab file.
+crontab -v    Display the last time you edited your crontab file. (This option is only available on a few systems.)
+
+5. Crontab file
+Crontab syntax :
+A crontab file has five fields for specifying day , date and time followed by the command to be run at that interval.
+
+crontab
+* in the value field above means all legal values as in braces for that column.
+
+The value column can have a * or a list of elements separated by commas. An element is either a number in the ranges shown above or two numbers in the range separated by a hyphen (meaning an inclusive range)
+Notes
+A. ) Repeat pattern like /2 for every 2 minutes or /10 for every 10 minutes is not supported by all operating systems. If you try to use it and crontab complains it is probably not supported.
+
+B.) The specification of days can be made in two fields: month day and weekday. If both are specified in an entry, they are cumulative meaning both of the entries will get executed .
+
+6. Crontab Examples
+A line in crontab file like below removes the tmp files from /home/someuser/tmp each day at 6:30 PM.
+
+30     18     *     *     *         rm /home/someuser/tmp/*
+
+Crontab every hour
+This is most commonly used for running cron every hour and executing a command after an interval of one hour.
+crontab format every hour is simple to have hour field as *  which runs every hour as the clock switches to new hour.  if you want to run it at the beginning of hour the minute filed needs to be 0 or any other minutes when you want to run it at a specific minute of the hour. 
+cron every hour to run at the beginning of the hour.00     *     *     *     *         rm /home/someuser/tmp/*
+cron every hour to run at 15 minute of an hour..
+
+15     *     *     *     *         rm /home/someuser/tmp/*
+
+cron every minute
+To run cron every minute keep the minutes field as * , as minute changes to new minute cron will be executed every minute.  if you want to run it continuously every hour then the hour field also needs to have value of  * .
+
+*     *     *     *     *         rm /home/someuser/tmp/*
+
+if you want to run a script every minute at specific hour, change the value of hour field to specific value such as 11th hour.
+
+*     11     *     *     *         rm /home/someuser/tmp/*
+
+More crontab examples
+Changing the parameter values as below will cause this command to run at different time schedule below :
+
+min	hour	day/month	month	day/week	Execution time
+30	0	1	1,6,12	*	— 00:30 Hrs  on 1st of Jan, June &amp; Dec.
+0	20	*	10	1-5	–8.00 PM every weekday (Mon-Fri) only in Oct.
+0	0	1,10,15	*	*	— midnight on 1st ,10th &amp; 15th of month
+5,10	0	10	*	1	— At 12.05,12.10 every Monday &amp; on 10th of every month
+:
+Note : If you inadvertently enter the crontab command with no argument(s), do not attempt to get out with Control-d. This removes all entries in your crontab file. Instead, exit with Control-c.
+
+7. Crontab Environment
+cron invokes the command from the user’s HOME directory with the shell, (/usr/bin/sh).
+cron supplies a default environment for every shell, defining:
+HOME=user’s-home-directory
+LOGNAME=user’s-login-id
+PATH=/usr/bin:/usr/sbin:.
+SHELL=/usr/bin/sh
+
+Users who desire to have their .profile executed must explicitly do so in the crontab entry or in a script called by the entry.
+
+8. Disable Email
+By default cron jobs sends a email to the user account executing the cronjob. If this is not needed put the following command At the end of the cron job line .
+
+&gt;/dev/null 2&gt;&amp;1
+
+9. Generate log file
+To collect the cron execution execution log in a file :
+
+30 18 * * * rm /home/someuser/tmp/* &gt; /home/someuser/cronlogs/clean_tmp_dir.log
+
+10. Crontab file location
+User crontab files are stored by the login names in different locations in different Unix and Linux flavors. These files are useful for backing up, viewing and restoring but should be edited only with crontab command by the users.
+
+Mac OS X
+/usr/lib/cron/tabs/
+BSD Unix 
+/var/cron/tabs/
+Solaris, HP-UX, Debian, Ubuntu
+/var/spool/cron/crontabs/
+AIX, Red Hat Linux, CentOS, Ferdora
+/var/spool/cron/</value>
+  </data>
 </root>
