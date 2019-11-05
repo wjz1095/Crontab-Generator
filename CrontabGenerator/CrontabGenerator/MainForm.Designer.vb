@@ -22,6 +22,7 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.FinalOutputTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.SelectMinuteRadioButton = New System.Windows.Forms.RadioButton()
@@ -772,8 +773,11 @@ Partial Class MainForm
         '
         'ScriptRunTimesListBox
         '
+        Me.ScriptRunTimesListBox.Enabled = False
         Me.ScriptRunTimesListBox.FormattingEnabled = True
+        Me.ScriptRunTimesListBox.Items.AddRange(New Object() {"*To be implemented in a future update*"})
         Me.ScriptRunTimesListBox.Location = New System.Drawing.Point(10, 17)
+        Me.ScriptRunTimesListBox.MultiColumn = True
         Me.ScriptRunTimesListBox.Name = "ScriptRunTimesListBox"
         Me.ScriptRunTimesListBox.Size = New System.Drawing.Size(184, 355)
         Me.ScriptRunTimesListBox.TabIndex = 0
@@ -798,6 +802,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.FinalOutputTextBox)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.Text = "Crontab Generator"
