@@ -26,3 +26,9 @@ Y:\Github-Repositories\Crontab-Generator\CrontabGenerator\CrontabGenerator\bin\D
 Y:\Github-Repositories\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.TrustInfo.xml
 Y:\Github-Repositories\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.exe.manifest
 Y:\Github-Repositories\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.application
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\bin\Debug\CrontabGenerator.exe.manifest
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\bin\Debug\CrontabGenerator.application
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.vbprojAssemblyReference.cache
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.TrustInfo.xml
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.exe.manifest
+C:\Users\FBI-Mobile-347\Documents\GitHub-Repositories-Local\Crontab-Generator\CrontabGenerator\CrontabGenerator\obj\Debug\CrontabGenerator.application

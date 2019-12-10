@@ -83,7 +83,12 @@ Partial Class MainForm
         Me.CronReferenceLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.ScriptRunTimesListBox = New System.Windows.Forms.ListBox()
+        Me.AtYearlyRadioButton = New System.Windows.Forms.RadioButton()
+        Me.AtMonthlyRadioButton = New System.Windows.Forms.RadioButton()
+        Me.AtWeeklyRadioButton = New System.Windows.Forms.RadioButton()
+        Me.AtDailyRadioButton = New System.Windows.Forms.RadioButton()
+        Me.AtHourlyRadioButton = New System.Windows.Forms.RadioButton()
+        Me.AtRebootRadioButton = New System.Windows.Forms.RadioButton()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -515,7 +520,7 @@ Partial Class MainForm
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(229, 184)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(211, 166)
+        Me.GroupBox1.Size = New System.Drawing.Size(223, 166)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Weekday"
@@ -523,7 +528,7 @@ Partial Class MainForm
         'WeekdaySelectRadioButton
         '
         Me.WeekdaySelectRadioButton.AutoSize = True
-        Me.WeekdaySelectRadioButton.Location = New System.Drawing.Point(128, 22)
+        Me.WeekdaySelectRadioButton.Location = New System.Drawing.Point(128, 24)
         Me.WeekdaySelectRadioButton.Name = "WeekdaySelectRadioButton"
         Me.WeekdaySelectRadioButton.Size = New System.Drawing.Size(14, 13)
         Me.WeekdaySelectRadioButton.TabIndex = 7
@@ -539,7 +544,7 @@ Partial Class MainForm
         Me.WeekdaySelectListBox.Items.AddRange(New Object() {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"})
         Me.WeekdaySelectListBox.Location = New System.Drawing.Point(148, 13)
         Me.WeekdaySelectListBox.Name = "WeekdaySelectListBox"
-        Me.WeekdaySelectListBox.Size = New System.Drawing.Size(47, 147)
+        Me.WeekdaySelectListBox.Size = New System.Drawing.Size(63, 147)
         Me.WeekdaySelectListBox.TabIndex = 6
         '
         'MondayFridayRadioButton
@@ -756,31 +761,90 @@ Partial Class MainForm
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label5.Location = New System.Drawing.Point(564, 624)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(81, 13)
+        Me.Label5.Size = New System.Drawing.Size(0, 13)
         Me.Label5.TabIndex = 16
-        Me.Label5.Text = "V1.0, 9/4/2019"
         '
         'GroupBox8
         '
-        Me.GroupBox8.Controls.Add(Me.ScriptRunTimesListBox)
+        Me.GroupBox8.Controls.Add(Me.AtYearlyRadioButton)
+        Me.GroupBox8.Controls.Add(Me.AtMonthlyRadioButton)
+        Me.GroupBox8.Controls.Add(Me.AtWeeklyRadioButton)
+        Me.GroupBox8.Controls.Add(Me.AtDailyRadioButton)
+        Me.GroupBox8.Controls.Add(Me.AtHourlyRadioButton)
+        Me.GroupBox8.Controls.Add(Me.AtRebootRadioButton)
         Me.GroupBox8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox8.Location = New System.Drawing.Point(460, 184)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(205, 381)
+        Me.GroupBox8.Size = New System.Drawing.Size(205, 166)
         Me.GroupBox8.TabIndex = 17
         Me.GroupBox8.TabStop = False
-        Me.GroupBox8.Text = "Script Will Run At These Times"
+        Me.GroupBox8.Text = "Other"
         '
-        'ScriptRunTimesListBox
+        'AtYearlyRadioButton
         '
-        Me.ScriptRunTimesListBox.Enabled = False
-        Me.ScriptRunTimesListBox.FormattingEnabled = True
-        Me.ScriptRunTimesListBox.Items.AddRange(New Object() {"*To be implemented in a future update*"})
-        Me.ScriptRunTimesListBox.Location = New System.Drawing.Point(10, 17)
-        Me.ScriptRunTimesListBox.MultiColumn = True
-        Me.ScriptRunTimesListBox.Name = "ScriptRunTimesListBox"
-        Me.ScriptRunTimesListBox.Size = New System.Drawing.Size(184, 355)
-        Me.ScriptRunTimesListBox.TabIndex = 0
+        Me.AtYearlyRadioButton.AutoSize = True
+        Me.AtYearlyRadioButton.Location = New System.Drawing.Point(10, 135)
+        Me.AtYearlyRadioButton.Name = "AtYearlyRadioButton"
+        Me.AtYearlyRadioButton.Size = New System.Drawing.Size(110, 17)
+        Me.AtYearlyRadioButton.TabIndex = 5
+        Me.AtYearlyRadioButton.TabStop = True
+        Me.AtYearlyRadioButton.Text = "@Yearly/Annually"
+        Me.AtYearlyRadioButton.UseVisualStyleBackColor = True
+        '
+        'AtMonthlyRadioButton
+        '
+        Me.AtMonthlyRadioButton.AutoSize = True
+        Me.AtMonthlyRadioButton.Location = New System.Drawing.Point(10, 112)
+        Me.AtMonthlyRadioButton.Name = "AtMonthlyRadioButton"
+        Me.AtMonthlyRadioButton.Size = New System.Drawing.Size(73, 17)
+        Me.AtMonthlyRadioButton.TabIndex = 4
+        Me.AtMonthlyRadioButton.TabStop = True
+        Me.AtMonthlyRadioButton.Text = "@Monthly"
+        Me.AtMonthlyRadioButton.UseVisualStyleBackColor = True
+        '
+        'AtWeeklyRadioButton
+        '
+        Me.AtWeeklyRadioButton.AutoSize = True
+        Me.AtWeeklyRadioButton.Location = New System.Drawing.Point(10, 89)
+        Me.AtWeeklyRadioButton.Name = "AtWeeklyRadioButton"
+        Me.AtWeeklyRadioButton.Size = New System.Drawing.Size(72, 17)
+        Me.AtWeeklyRadioButton.TabIndex = 3
+        Me.AtWeeklyRadioButton.TabStop = True
+        Me.AtWeeklyRadioButton.Text = "@Weekly"
+        Me.AtWeeklyRadioButton.UseVisualStyleBackColor = True
+        '
+        'AtDailyRadioButton
+        '
+        Me.AtDailyRadioButton.AutoSize = True
+        Me.AtDailyRadioButton.Location = New System.Drawing.Point(10, 66)
+        Me.AtDailyRadioButton.Name = "AtDailyRadioButton"
+        Me.AtDailyRadioButton.Size = New System.Drawing.Size(59, 17)
+        Me.AtDailyRadioButton.TabIndex = 2
+        Me.AtDailyRadioButton.TabStop = True
+        Me.AtDailyRadioButton.Text = "@Daily"
+        Me.AtDailyRadioButton.UseVisualStyleBackColor = True
+        '
+        'AtHourlyRadioButton
+        '
+        Me.AtHourlyRadioButton.AutoSize = True
+        Me.AtHourlyRadioButton.Location = New System.Drawing.Point(10, 43)
+        Me.AtHourlyRadioButton.Name = "AtHourlyRadioButton"
+        Me.AtHourlyRadioButton.Size = New System.Drawing.Size(66, 17)
+        Me.AtHourlyRadioButton.TabIndex = 1
+        Me.AtHourlyRadioButton.TabStop = True
+        Me.AtHourlyRadioButton.Text = "@Hourly"
+        Me.AtHourlyRadioButton.UseVisualStyleBackColor = True
+        '
+        'AtRebootRadioButton
+        '
+        Me.AtRebootRadioButton.AutoSize = True
+        Me.AtRebootRadioButton.Location = New System.Drawing.Point(10, 20)
+        Me.AtRebootRadioButton.Name = "AtRebootRadioButton"
+        Me.AtRebootRadioButton.Size = New System.Drawing.Size(71, 17)
+        Me.AtRebootRadioButton.TabIndex = 0
+        Me.AtRebootRadioButton.TabStop = True
+        Me.AtRebootRadioButton.Text = "@Reboot"
+        Me.AtRebootRadioButton.UseVisualStyleBackColor = True
         '
         'MainForm
         '
@@ -802,9 +866,11 @@ Partial Class MainForm
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.FinalOutputTextBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "MainForm"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "Crontab Generator"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -821,6 +887,7 @@ Partial Class MainForm
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -885,6 +952,10 @@ Partial Class MainForm
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents CustomCommandTextBox As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
-    Friend WithEvents ScriptRunTimesListBox As System.Windows.Forms.ListBox
-
+    Friend WithEvents AtRebootRadioButton As RadioButton
+    Friend WithEvents AtYearlyRadioButton As RadioButton
+    Friend WithEvents AtMonthlyRadioButton As RadioButton
+    Friend WithEvents AtWeeklyRadioButton As RadioButton
+    Friend WithEvents AtDailyRadioButton As RadioButton
+    Friend WithEvents AtHourlyRadioButton As RadioButton
 End Class

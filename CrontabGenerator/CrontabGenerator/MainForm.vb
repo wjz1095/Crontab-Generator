@@ -348,7 +348,6 @@
             End If
         End If
 
-
         'Output logic
         If MuteOutputRadioButton.Checked = True Then
             OutputSelect = ""
@@ -360,8 +359,30 @@
             OutputSelect = SendOutputToEmailTextBox.Text
         End If
 
-        'Output string, then sets output textbox as the combined string we create with all values
+        'Placed this above the "other" logic with radio buttons as if one of the "other" radio buttons is selected it will overwrite any selections made with other radio buttons
         FinalOutput = MinuteSelect + " " + HourSelect + " " + DaySelect + " " + MonthSelect + " " + WeekdaySelect + "       " + CustomCommandTextBox.Text + " " + OutputSelect
+
+        'Other logic
+        If AtRebootRadioButton.Checked = True Then
+            FinalOutput = "@reboot " + CustomCommandTextBox.Text + OutputSelect
+        End If
+        If AtHourlyRadioButton.Checked = True Then
+            FinalOutput = "@hourly " + CustomCommandTextBox.Text + OutputSelect
+        End If
+        If AtDailyRadioButton.Checked = True Then
+            FinalOutput = "@daily " + CustomCommandTextBox.Text + OutputSelect
+        End If
+        If AtWeeklyRadioButton.Checked = True Then
+            FinalOutput = "@weekly " + CustomCommandTextBox.Text + OutputSelect
+        End If
+        If AtMonthlyRadioButton.Checked = True Then
+            FinalOutput = "@monthly " + CustomCommandTextBox.Text + OutputSelect
+        End If
+        If AtYearlyRadioButton.Checked = True Then
+            FinalOutput = "@yearly " + CustomCommandTextBox.Text + OutputSelect
+        End If
+
+        'Output string, then sets output textbox as the combined string we create with all values
         FinalOutputTextBox.Text = FinalOutput
 
     End Sub
@@ -375,6 +396,13 @@
         EveryWeekdayRadioButton.Checked = True
         EveryMonthRadioButton.Checked = True
 
+        AtRebootRadioButton.Checked = False
+        AtHourlyRadioButton.Checked = False
+        AtDailyRadioButton.Checked = False
+        AtWeeklyRadioButton.Checked = False
+        AtMonthlyRadioButton.Checked = False
+        AtYearlyRadioButton.Checked = False
+
         MuteOutputRadioButton.Checked = True
 
         FinalOutputTextBox.Text = ""
@@ -386,6 +414,53 @@
         CrontabReference.Show()
     End Sub
 
+    Private Sub AtRebootRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles AtRebootRadioButton.CheckedChanged
+        AtHourlyRadioButton.Checked = False
+        AtDailyRadioButton.Checked = False
+        AtWeeklyRadioButton.Checked = False
+        AtMonthlyRadioButton.Checked = False
+        AtYearlyRadioButton.Checked = False
+    End Sub
+
+    Private Sub AtHourlyRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles AtHourlyRadioButton.CheckedChanged
+        AtRebootRadioButton.Checked = False
+        AtDailyRadioButton.Checked = False
+        AtWeeklyRadioButton.Checked = False
+        AtMonthlyRadioButton.Checked = False
+        AtYearlyRadioButton.Checked = False
+    End Sub
+
+    Private Sub AtDailyRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles AtDailyRadioButton.CheckedChanged
+        AtRebootRadioButton.Checked = False
+        AtHourlyRadioButton.Checked = False
+        AtWeeklyRadioButton.Checked = False
+        AtMonthlyRadioButton.Checked = False
+        AtYearlyRadioButton.Checked = False
+    End Sub
+
+    Private Sub AtWeeklyRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles AtWeeklyRadioButton.CheckedChanged
+        AtRebootRadioButton.Checked = False
+        AtHourlyRadioButton.Checked = False
+        AtDailyRadioButton.Checked = False
+        AtMonthlyRadioButton.Checked = False
+        AtYearlyRadioButton.Checked = False
+    End Sub
+
+    Private Sub AtMonthlyRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles AtMonthlyRadioButton.CheckedChanged
+        AtRebootRadioButton.Checked = False
+        AtHourlyRadioButton.Checked = False
+        AtDailyRadioButton.Checked = False
+        AtWeeklyRadioButton.Checked = False
+        AtYearlyRadioButton.Checked = False
+    End Sub
+
+    Private Sub AtYearlyRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles AtYearlyRadioButton.CheckedChanged
+        AtRebootRadioButton.Checked = False
+        AtHourlyRadioButton.Checked = False
+        AtDailyRadioButton.Checked = False
+        AtWeeklyRadioButton.Checked = False
+        AtMonthlyRadioButton.Checked = False
+    End Sub
 End Class
 
 

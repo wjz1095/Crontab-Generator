@@ -121,8 +121,6 @@
     <value>Setting up cron jobs in Unix, Solaris &amp; Linux
 cron is a Unix, solaris, Linux utility that allows tasks to be automatically run in the background at regular intervals by the cron daemon. 
 
-cron meaning – There is no definitive explanation but most accepted answers is reportedly from Ken Thompson ( author of unix cron ), name cron comes from chron ,the Greek prefix for ‘time.’.
-
 What is cron ? – Cron is a daemon which runs at the times of system boot from /etc/init.d scripts. If needed it can be stopped/started/restart using init script or with command service crond start in Linux systems.
 
 This document covers following aspects of Unix, Linux cron jobs to help you understand and implement cronjobs successfully
@@ -234,6 +232,17 @@ BSD Unix
 Solaris, HP-UX, Debian, Ubuntu
 /var/spool/cron/crontabs/
 AIX, Red Hat Linux, CentOS, Ferdora
-/var/spool/cron/</value>
+/var/spool/cron/
+
+Additional Information
+-Add "additional commands can be run separated by a semicolon ;"
+-You can back up YOUR crontab with crontab &lt;path&gt;
+-You can back up ALL crontab with crontab -l &gt; &lt;path&gt;
+-You can restore crontab with crontab -a &lt;path&gt;
+-Delete YOUR crontab with crontab -r
+-Delete other users crontab with crontab -u &lt;user&gt; -r
+-Allow access to cron by editing /etc/cron.d/cron.allow. Add usernames allowed to use cron here
+-Deny access to cron by editing /etc/cron.d/cron.deny. Add usernames denied cron usage here
+-Denying blocks the users from viewing cron or editing it</value>
   </data>
 </root>
